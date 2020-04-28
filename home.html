@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="basic" id="beginningPhaseDiv">
+        <div class="outerDiv" id="beginningPhaseBasic" style="display: block;">
+            <h2>&#62; &nbsp; Begin</h2>
+            <div class="innerDiv" id="beginningPhaseBasicInner">
+                <ol>
+                    <li>Untap</li>
+                    <li>Draw</li>
+                </ol>
+            </div>
+        </div>
+        <div class="outerDiv" id="beginningPhaseSimple">
+            <h2>&or; Beginning Phase</h2>
+            <div class="innerDiv">
+                <h4>Untap Step</h4>
+                <ul>
+                    <li>Untap all permanents</li>
+                </ul>
+                <h4>Upkeep Step</h4>
+                <ul>
+                    <li>Any abilities that trigger at the beginning of the upkeep go on the stack</li>
+                    <li>*upkeep costs are paid(when?)</li>
+                </ul>
+                <h4>Draw Step</h4>
+                <ul>
+                    <li>Active player draws a card.</li>
+                    <li>Any abilities that trigger at the beginning of the draw step go on the stack</li>
+                </ul>
+                <button id="advancedViewToggle">More Details</button>
+            </div>
+        </div>
+        <div class="outerDiv" id="beginningPhaseAdvanced">
+            <h2>&or; Beginning Phase</h2>
+            <div class="innerDiv">
+                <h4>Untap Step</h4>
+                <ol>
+                    <li>Phasing in and out (simultaineous)</li>
+                    <li>Untap all permanents (simultaineous)</li>
+                </ol>
+                <ul>
+                    <li>* no priority</li>
+                    <li>* state-based effects and triggered abilities are delayed to the upkeep</li>
+                </ul>
+                <h4>Upkeep Step</h4>
+                <ol>
+                    <li>Any abilities that trigger at the beginning of the upkeep go on the stack</li>
+                    <li>The active player gains priority</li>
+                    <li>*upkeep costs are paid(when?)</li>
+                </ol>
+                <h4>Draw Step</h4>
+                <ol>
+                    <li>Active player draws a card.</li>
+                    <li>Any abilities that trigger at the beginning of the draw step go on the stack</li>
+                    <li>The active player gains priority</li>
+                </ol>
+                <button id="simpleViewToggle">Fewer Details</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="basic" id="precombatMainPhaseDiv">
+        <div class="outerDiv" id="precombatMainPhaseBasic" style="display: block;">
+            <h2>&#62; &nbsp; Main Phase</h2>
+            <div class="innerDiv" id="precombatMainPhaseBasicInner">
+                <ul>
+                    <li>Play a land (only one land per turn)</li>
+                    <li>Cast creatures and other spells</li>
+                </ul>
+            </div>
+        </div>
+        <div class="outerDiv" id="precombatMainPhaseSimple">
+            <h2>&or; Precombat Main Phase</h2>
+            <div class="innerDiv">
+                <ul>
+                    <li>Once per tern, the active player may play a land from his or her hand</li>
+                    <li>Cast creatures and other spells</li>
+                </ul>
+                <button id="advancedViewTogglePrecombatMain">More Details</button>
+            </div>
+        </div>
+        <div class="outerDiv" id="precombatMainPhaseAdvanced">
+            <h2>&or; Precombat Main Phase</h2>
+            <div class="innerDiv">
+                <ol>
+                    <li>Abilities that trigger at the beginning of the Main Phase go on the stack</li>
+                    <li>Active player gains priority</li>
+                    <ul>
+                        <li>Once per turn, the active player may play a land from their hand while the stack is empty (This is a special action that doesn't use the stack)</li>
+                        <li>Non-instants can be played during this phase, by the active player, when the stack is empty</li>
+                    </ul>
+                </ol>
+                <button id="simpleViewTogglePrecombatMain">Fewer Details</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="basic" id="combatPhaseDiv">
+        <div class="outerDiv" id="combatPhaseBasic" style="display: block;">
+            <h2>&#62; &nbsp; Combat</h2>
+            <div class="innerDiv" id="combatPhaseBasicInner">
+                <ol>
+                    <li>Declare Attackers</li>
+                    <li>Opponents declare blockers</li>
+                    <li>Combat damage is dealt</li>
+                </ol>
+            </div>
+        </div>
+        <div class="outerDiv" id="combatPhaseSimple">
+            <h2>&or; Combat Phase</h2>
+            <div class="innerDiv">
+                <h4>Beginning of Combat Step</h4>
+                <ul>
+                    <li>Choose all players that you wish to attack</li>
+                </ul>
+                <h4>Declare Attackers Step</h4>
+                <ol>
+                    <li>Assign attacking creatures</li>
+                    <ul>
+                        <li>Must be untapped</li>
+                        <li>Must have haste or have been controlled by the active player continuously since the turn began</li>
+                    </ul>
+                    <li>Assign which creatures are attacking which players</li>
+                    <li>Tap creatures that are attacking</li>
+                    <li>player can choose to pay for optional attacking costs</li>
+                    <li>abilities trigger for attacking creatures being declared</li>
+                </ol>
+                <button id="advancedViewToggleCombat">More Details</button>
+            </div>
+        </div>
+        <div class="outerDiv" id="combatPhaseAdvanced">
+            <h2>&or; Combat Phase</h2>
+            <div class="innerDiv">
+                <h4>Beginning of Combat Step</h4>
+                <ol>
+                    <li>Choose all players that you wish to attack</li>
+                    <li>Active player gains priority</li>
+                </ol>
+                <h4>Declare Attackers Step</h4>
+                <ol>
+                    <li>Assign attacking creatures</li>
+                    <ul>
+                        <li>Must be untapped</li>
+                        <li>Must have haste or have been controlled by the active player continuously since the turn began</li>
+                    </ul>
+                    <li>Assign which creatures are attacking which players</li>
+                    <li>If applicable, anounce Banding / "bands with other" which creatures are banded</li>
+                    <li>Tap creatures that are attacking</li>
+                    <li>player can choose to pay for optional attacking costs</li>
+                    <li>player may activate mana sources and once they have enough for all costs, pays them in any order in full</li>
+                    <li>each chosen creature still controlled by the active player is an attacting creature</li>
+                    <li>abilities trigger for attacking creatures being declared</li>
+                    <li>active player gains priority</li>
+                </ol>
+                <ul>
+                    <li>see rules 508.3, .4, .5, .6, .7</li>
+                </ul>
+                <h4>Attacking twice / Can't be attacked / forced to attack / must attack</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button id="simpleViewToggleCombat">Fewer Details</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <button id="btn_0_expandToggle">+</button>
+        <p>
+            Upkeep
+        </p>
+        <div class="expanded" id="0.0" style="display: none; background-color: teal;">
+            <button id="btn_0.0_expandToggle">+</button>
+            <p>
+                Untap Step
+            </p>
+        </div>
+        <div class="expanded" id="0.1">
+            <p>
+                Draw Step
+            </p>
+        </div>
+    </div>
+
+    <div class="simple" id="1">
+        <p>
+            Main Phase
+        </p>
+    </div>
+
+    <div class="simple" id="0" style="background-color: coral;" >
+        <button id="btn_0_expandToggle">+</button>
+        <p>
+            Upkeep
+        </p>
+        <div class="expanded" id="0.0" style="display: none; background-color: teal;">
+            <button id="btn_0.0_expandToggle">+</button>
+            <p>
+                Untap Step
+            </p>
+        </div>
+        <div class="expanded" id="0.1">
+            <p>
+                Draw Step
+            </p>
+        </div>
+    </div>
+    <div class="simple" id="1">
+        <p>
+            Main Phase
+        </p>
+    </div>
+</body>
+</html>
