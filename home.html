@@ -83,7 +83,7 @@
             <h2>&or; Precombat Main Phase</h2>
             <div class="innerDiv">
                 <ul>
-                    <li>Once per tern, the active player may play a land from his or her hand</li>
+                    <li>Once per turn, the active player may play a land from his or her hand</li>
                     <li>Cast creatures and other spells</li>
                 </ul>
                 <button id="advancedViewTogglePrecombatMain">More Details</button>
@@ -174,5 +174,101 @@
             </div>
         </div>
     </div>
+
+    <div class="basic" id="postcombatMainPhaseDiv">
+        <div class="outerDiv" id="postcombatMainPhaseBasic" style="display: block;">
+            <h2>&#62; &nbsp; Main Phase</h2>
+            <div class="innerDiv" id="postcombatMainPhaseBasicInner">
+                <ul>
+                    <li>Play a land (only one land per turn)</li>
+                    <li>Cast creatures and other spells</li>
+                </ul>
+            </div>
+        </div>
+        <div class="outerDiv" id="postcombatMainPhaseSimple">
+            <h2>&or; Second Main Phase</h2>
+            <div class="innerDiv">
+                <ul>
+                    <li>Once per turn, the active player may play a land from his or her hand</li>
+                    <li>Cast creatures and other spells</li>
+                </ul>
+                <button id="advancedViewTogglePostcombatMain">More Details</button>
+            </div>
+        </div>
+        <div class="outerDiv" id="postcombatMainPhaseAdvanced">
+            <h2>&or; Postcombat Main Phase</h2>
+            <div class="innerDiv">
+                <ol>
+                    <li>Abilities that trigger at the beginning of the Main Phase go on the stack</li>
+                    <li>Active player gains priority</li>
+                    <ul>
+                        <li>Once per turn, the active player may play a land from their hand while the stack is empty (This is a special action that doesn't use the stack)</li>
+                        <li>Non-instants can be played during this phase, by the active player, when the stack is empty</li>
+                    </ul>
+                </ol>
+                <button id="simpleViewTogglePostcombatMain">Fewer Details</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="basic" id="endPhaseDiv">
+        <div class="outerDiv" id="endPhaseBasic" style="display: block;">
+            <h2>&#62; &nbsp; End</h2>
+            <div class="innerDiv" id="endPhaseBasicInner">
+                <ol>
+                    <li>Creatures Heal</li>
+                    <li>Discard down to seven cards in hand</li>
+                </ol>
+            </div>
+        </div>
+        <div class="outerDiv" id="endPhaseSimple">
+            <h2>&or; End Phase</h2>
+            <div class="innerDiv">
+                <h4>Untap Step</h4>
+                <ul>
+                    <li>Untap all permanents</li>
+                </ul>
+                <h4>Upkeep Step</h4>
+                <ul>
+                    <li>Any abilities that trigger at the beginning of the upkeep go on the stack</li>
+                    <li>*upkeep costs are paid(when?)</li>
+                </ul>
+                <h4>Draw Step</h4>
+                <ul>
+                    <li>Active player draws a card.</li>
+                    <li>Any abilities that trigger at the beginning of the draw step go on the stack</li>
+                </ul>
+                <button id="advancedViewToggleEndPhase">More Details</button>
+            </div>
+        </div>
+        <div class="outerDiv" id="endPhaseAdvanced">
+            <h2>&or; Beginning Phase</h2>
+            <div class="innerDiv">
+                <h4>Untap Step</h4>
+                <ol>
+                    <li>Phasing in and out (simultaineous)</li>
+                    <li>Untap all permanents (simultaineous)</li>
+                </ol>
+                <ul>
+                    <li>* no priority</li>
+                    <li>* state-based effects and triggered abilities are delayed to the upkeep</li>
+                </ul>
+                <h4>Upkeep Step</h4>
+                <ol>
+                    <li>Any abilities that trigger at the beginning of the upkeep go on the stack</li>
+                    <li>The active player gains priority</li>
+                    <li>*upkeep costs are paid(when?)</li>
+                </ol>
+                <h4>Draw Step</h4>
+                <ol>
+                    <li>Active player draws a card.</li>
+                    <li>Any abilities that trigger at the beginning of the draw step go on the stack</li>
+                    <li>The active player gains priority</li>
+                </ol>
+                <button id="simpleViewToggleEndPhase">Fewer Details</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
