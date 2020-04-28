@@ -1,8 +1,14 @@
+body {
+    background-color: Black;
+}
+
 .outerDiv {
     display: none;
+    background-color: lightgrey;
+
 }
 .innerDiv {
-    background-color: lightcoral;
+    background-color: #fb6868;
     padding: 5%;
     padding-top: 5px;
     padding-bottom: 10px;
