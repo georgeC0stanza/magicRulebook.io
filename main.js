@@ -1,62 +1,53 @@
+/********************************************************
+ * Event handlers for the basic view
+ */
+function viewExpander(divPartial){
+    var x = document.getElementById(divPartial + "Basic");
+    var y = document.getElementById(divPartial + "Simple");
+    var z = document.getElementById(divPartial + "Advanced");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+      z.style.display = "none";
+    } else {
+      x.style.display = "none";
+      y.style.display = "block";
+    }
+}
 
 document.getElementById("beginningPhaseDiv").addEventListener(
     "click", 
-    function(){ 
-        var x = document.getElementById("beginningPhaseBasic");
-        var y = document.getElementById("beginningPhaseSimple");
-        var z = document.getElementById("beginningPhaseAdvanced");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-          y.style.display = "none";
-          z.style.display = "none";
-        } else {
-          x.style.display = "none";
-          y.style.display = "block";
-        }
-    },
+    function(){ viewExpander("beginningPhase") },
     true
 );
 
 document.getElementById("precombatMainPhaseDiv").addEventListener(
     "click", 
-    function(){ 
-        var x = document.getElementById("precombatMainPhaseBasic");
-        var y = document.getElementById("precombatMainPhaseSimple");
-        var z = document.getElementById("precombatMainPhaseAdvanced");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-          y.style.display = "none";
-          z.style.display = "none";
-        } else {
-          x.style.display = "none";
-          y.style.display = "block";
-        }
-    },
+    function(){ viewExpander("precombatMainPhase") },
     true
 );
-
-
 
 document.getElementById("combatPhaseDiv").addEventListener(
     "click", 
-    function(){ 
-        var x = document.getElementById("combatPhaseBasic");
-        var y = document.getElementById("combatPhaseSimple");
-        var z = document.getElementById("combatPhaseAdvanced");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-          y.style.display = "none";
-          z.style.display = "none";
-        } else {
-          x.style.display = "none";
-          y.style.display = "block";
-        }
-    },
+    function(){ viewExpander("combatPhase") },
     true
 );
 
+document.getElementById("postcombatMainPhaseDiv").addEventListener(
+    "click", 
+    function(){ viewExpander("postcombatMainPhase") },
+    true
+);
 
+document.getElementById("endPhaseDiv").addEventListener(
+    "click", 
+    function(){ viewExpander("endPhase") },
+    true
+);
 
+/********************************************************
+ * Button event handlers
+ */
 document.getElementById("advancedViewToggle").addEventListener(
     "click", 
     function(){ 
@@ -65,8 +56,7 @@ document.getElementById("advancedViewToggle").addEventListener(
         document.getElementById("beginningPhaseAdvanced").style.display = "block";
     },
     false
-);
-    
+); 
 document.getElementById("simpleViewToggle").addEventListener(
     "click", 
     function(){ 
@@ -88,8 +78,6 @@ document.getElementById("advancedViewTogglePrecombatMain").addEventListener(
     },
     false
 );
-
-
 document.getElementById("simpleViewTogglePrecombatMain").addEventListener(
     "click", 
     function(){ 
@@ -102,7 +90,6 @@ document.getElementById("simpleViewTogglePrecombatMain").addEventListener(
 );
 
 
-
 document.getElementById("advancedViewToggleCombat").addEventListener(
     "click", 
     function(){ 
@@ -112,7 +99,6 @@ document.getElementById("advancedViewToggleCombat").addEventListener(
     },
     false
 );
-    
 document.getElementById("simpleViewToggleCombat").addEventListener(
     "click", 
     function(){ 
@@ -124,3 +110,43 @@ document.getElementById("simpleViewToggleCombat").addEventListener(
     false
 );
 
+document.getElementById("advancedViewTogglePostcombatMain").addEventListener(
+    "click", 
+    function(){ 
+        document.getElementById("postcombatMainPhaseBasic").style.display = "none";
+        document.getElementById("postcombatMainPhaseSimple").style.display = "none";
+        document.getElementById("postcombatMainPhaseAdvanced").style.display = "block";
+
+    },
+    false
+);
+document.getElementById("simpleViewTogglePostcombatMain").addEventListener(
+    "click", 
+    function(){ 
+        document.getElementById("PostcombatMainPhaseBasic").style.display = "none";
+        document.getElementById("PostcombatMainPhaseSimple").style.display = "block";
+        document.getElementById("PostcombatMainPhaseAdvanced").style.display = "none";
+
+    },
+    false
+);
+
+document.getElementById("advancedViewToggleEnd").addEventListener(
+    "click", 
+    function(){ 
+        document.getElementById("endPhaseBasic").style.display = "none";
+        document.getElementById("endPhaseSimple").style.display = "none";
+        document.getElementById("endPhaseAdvanced").style.display = "block";
+    },
+    false
+);
+document.getElementById("simpleViewToggleEnd").addEventListener(
+    "click", 
+    function(){ 
+        document.getElementById("endPhaseBasic").style.display = "none";
+        document.getElementById("endPhaseSimple").style.display = "block";
+        document.getElementById("endPhaseAdvanced").style.display = "none";
+
+    },
+    false
+);
