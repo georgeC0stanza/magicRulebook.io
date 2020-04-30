@@ -35,12 +35,17 @@
                 <h4>Upkeep Step</h4>
                 <ol>
                     <li>Resolve any abilities that trigger at "the beginning of the upkeep"</li>
+                    <li>You can cast instants and activate abillities</li>
                     <li>Upkeep costs are paid</li>
                 </ol>
                 <h4>Draw Step</h4>
+                <ul>
+                    <li>Skip this step on the first turn of a two-player game</li>
+                </ul>
                 <ol>
-                    <li>Active player draws a card.</li>
+                    <li>Draw a card</li>
                     <li>Resolve any abilities that trigger at "the beginning of the draw step"</li>
+                    <li>You can cast instants and activate abillities</li>
                 </ol>
                 <hr>
                 <button id="advancedViewToggle">More Details</button>
@@ -51,7 +56,7 @@
             <div class="innerDivAdvanced">
                 <h4>Untap Step</h4>
                 <ol>
-                    <li>Phasing in and out (simultaneously)</li>
+                    <li><span style="font-weight: bold;">Phasing</span> in and out (simultaneously)</li>
                     <li>Untap all permanents (simultaneously)</li>
                 </ol>
                 <ul>
@@ -60,14 +65,14 @@
                 <h4>Upkeep Step</h4>
                 <ol>
                     <li>Any abilities that trigger at the beginning of the upkeep go on the stack</li>
-                    <li>The active player gains priority</li>
+                    <li><span style="font-style: italic;">The active player gains priority</span></li>
                     <li>*upkeep costs are paid(when?)</li>
                 </ol>
                 <h4>Draw Step</h4>
                 <ol>
                     <li>Active player draws a card.</li>
                     <li>Any abilities that trigger at the beginning of the draw step go on the stack</li>
-                    <li>The active player gains priority</li>
+                    <li><span style="font-style: italic;">The active player gains priority</span></li>
                 </ol>
                 <hr>
                 <button style="float: left;">Close</button>
@@ -105,7 +110,7 @@
             <div class="innerDivAdvanced">
                 <ol>
                     <li>Abilities that trigger at the beginning of the main phase or the precombat main phase go on the stack</li>
-                    <li>Active player gains priority</li>
+                    <li><span style="font-style: italic;">The active player gains priority</span></li>
                     <ul>
                         <li>Once per turn, the active player may play a land from their hand while the stack is empty (This is a special action that doesn't use the stack)</li>
                         <li>Non-instants can be played during this phase, by the active player, when the stack is empty</li>
@@ -136,6 +141,7 @@
                 <h4>Beginning of Combat Step</h4>
                 <ol>
                     <li>Choose all players that you wish to attack</li>
+                    <li>You can cast instants and activate abillities</li>
                 </ol>
                 <h4>Declare Attackers Step</h4>
                 <ol>
@@ -148,6 +154,7 @@
                     <li>Tap creatures that are attacking</li>
                     <li>Pay for optional attacking costs, if desired</li>
                     <li>Abilities trigger for attacking creatures being declared</li>
+                    <li>You can cast instants and activate abillities</li>
                 </ol>
                 <h4>Declare Blockers Step</h4>
                 <ol>
@@ -157,11 +164,9 @@
                             <li>The defending player chooses which creatures will block which attacking creatures</li>
                             <li>More than one creature may block a single attacking creature</li>
                         </ul>
-                        <ol>
-                            <li>Any attacking creature with one or more creatures declares as blocking for it becomes a blocked creature; any without creatures blocking them become unblocked creatures</li>
-                            <li>Abilities trigger for blockers being declared</li>
-                        </ol>
                     </li>
+                    <li>Resolve any abilities that trigger for blockers being declared</li>
+                    <li>You can cast instants and activate abillities</li>
                     <li>For each attacking creature that's become blocked, announce that creature's damage assignment order</li>
                     <li>For each blocking creature, the defending player announces that creatures's damage assignment order</li>
                 </ol>
@@ -173,7 +178,7 @@
                     <li>All combat damage that's been assigned is dealt simultaneously</li>
                 </ol>
                 <ul>
-                    <li>If a creature has first strike or double strike:
+                    <li>If a creature has <span style="font-weight: bold;">first strike</span> or <span style="font-weight: bold;">double strike</span>:
                         <ol>
                             <li>As the combat damage step begins, the only creatures that assign combat damage in that step are those with first strike or double strike</li>
                             <li>Instead of proceeding to the end of combat step, the phase gets a second combat damage step</li>
@@ -184,8 +189,8 @@
                 </ul>
                 <h4>End of Combat Step</h4>
                 <ol>
-                    <li>Abilities that trigger "at the end of combat" trigger</li>
-                    <li>The active player gets priority</li>
+                    <li>Resolve any abilities that trigger "at the end of combat"</li>
+                    <li>You can cast instants and activate abillities</li>
                     <li>Creatures and planeswalkers are removed from combat and effects that last "until end of combat" expire</li>
                 </ol>
                 <hr>
@@ -198,23 +203,23 @@
                 <h4>Beginning of Combat Step</h4>
                 <ol>
                     <li>Choose all players that you wish to attack</li>
-                    <li>Active player gains priority</li>
+                    <li><span style="font-style: italic;">The active player gains priority</span></li>
                 </ol>
                 <h4>Declare Attackers Step</h4>
                 <ol>
-                    <li>The active playerssign attacking creatures</li>
+                    <li>The active players assign attacking creatures</li>
                     <ul>
                         <li>Must be untapped</li>
                         <li>Must have haste or have been controlled by the active player continuously since the turn began</li>
                     </ul>
                     <li>Active player assigns which creatures are attacking which players</li>
-                    <li>If applicable, the active player anounces Banding / "bands with other" which creatures are banded</li>
+                    <li>If applicable, the active player anounces <span style="font-weight: bold;">Banding</span> / "bands with other" which creatures are banded</li>
                     <li>Active player taps all creatures that are attacking</li>
                     <li>The active player can choose to pay for optional attacking costs</li>
                     <li>The active player may activate mana sources and once they have enough for all costs, pays them in any order in full</li>
                     <li>Each chosen creature still controlled by the active player is an attacting creature</li>
                     <li>Abilities trigger for attacking creatures being declared</li>
-                    <li>Active player gains priority</li>
+                    <li><span style="font-style: italic;">The active player gains priority</span></li>
                 </ol>
                 <h4>Declare Blockers Step</h4>
                 <ol>
@@ -239,13 +244,9 @@
                                     <li>This remains unchanged until the creature is removed form combat, an effect says that it is blocked or unblocked, or the combat phase ends, which ever comes first</li>
                                 </ul>
                             </li>
-                            <li>Abilities trigger for blockers being declared</li>
-                            <li>the active player gets priority
-                                <ul>
-                                    <li>Any abilities that triggered on blockers being declared or that trigger during the process are put onto the stack before the active player gets priority</li>
-                                </ul>
-                            </li>
                         </ol>
+                        <li>Abilities trigger for blockers being declared</li>
+                        <li><span style="font-style: italic;">The active player gains priority</span></li>
                     </li>
                     <li>For each attacking creature that's become blocked, the active player announces that creature's damage assignment order</li>
                     <li>For each blocking creature, the defending player announces that creatures's damage assignment order</li>
@@ -270,14 +271,14 @@
                         </ul>
                     </li>
                     <li>All combat damage that's been assigned is dealt simultaneously</li>
-                    <li>The active player gets priority
+                    <li><span style="font-style: italic;">The active player gains priority</span>
                         <ul>
                             <li>Any abilities that triggered are put onto the stack first</li>
                         </ul>
                     </li>
                 </ol>
                 <ul>
-                    <li>If a creature has first strike or double strike:
+                    <li>If a creature has <span style="font-weight: bold;">first strike</span> or <span style="font-weight: bold;">double strike</span>:
                         <ol>
                             <li>As the combat damage step begins, the only creatures that assign combat damage in that step are those with first strike or double strike</li>
                             <li>Instead of proceeding to the end of combat step, the phase gets a second combat damage step</li>
@@ -289,7 +290,7 @@
                 <h4>End of Combat Step</h4>
                 <ol>
                     <li>Abilities that trigger "at the end of combat" trigger</li>
-                    <li>The active player gets priority</li>
+                    <li><span style="font-style: italic;">The active player gains priority</span></li>
                     <li>Creatures and planeswalkers are removed from combat and effects that last "until end of combat" expire</li>
                 </ol>
                 <h4  style="display: none;">Attacking twice</h4>
@@ -329,7 +330,7 @@
             <div class="innerDivAdvanced">
                 <ol>
                     <li>Abilities that trigger at the beginning of the main phase or the postcombat main phase go on the stack</li>
-                    <li>Active player gains priority</li>
+                    <li><span style="font-style: italic;">The active player gains priority</span></li>
                     <ul>
                         <li>Once per turn, the active player may play a land from their hand while the stack is empty (This is a special action that doesn't use the stack)</li>
                         <li>Non-instants can be played during this phase, by the active player, when the stack is empty</li>
@@ -359,11 +360,13 @@
                 <h4>End Step</h4>
                 <ol>
                     <li>Resolve any abilities that trigger "at end of turn", "at the beginning of the end step", or "at the beginning of the next end step"</li>
+                    <li>You can cast instants and activate abillities</li>
                 </ol>
                 <h4>Cleanup Step</h4>
                 <ol>
                     <li>Discard down to your maximum hand size</li>
                     <li>All damage is removed and all "until end of turn" and "this turn" effects end</li>
+                    <li>If an ability triggers during this step, you can cast instants and activate abillities</li>
                 </ol>
                 <hr>
                 <button id="advancedViewToggleEnd">More Details</button>
@@ -375,13 +378,13 @@
                 <h4>End Step</h4>
                 <ol>
                     <li>Any abilities that trigger "at end of turn", "at the beginning of the end step", or "at the beginning of the next end step" go on the stack</li>
-                    <li>The active player gets priority</li>
+                    <li><span style="font-style: italic;">The active player gains priority</span></li>
                 </ol>
                 <h4>Cleanup Step</h4>
                 <ol>
                     <li>The active player discards down to their maximum hand size</li>
                     <li>All damage marked on permanents is removed and all "until end of turn" and "this turn" effects end</li>
-                    <li>If any triggered abilities are put on the stack, then the active player gets priority
+                    <li>If any triggered abilities are put on the stack, then <span style="font-style: italic;">the active player gains priority</span>
                         <ul>
                             <li>Once the stack is empty, another cleanup step begins</li>
                         </ul>
