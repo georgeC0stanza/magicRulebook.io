@@ -15,33 +15,57 @@ function viewExpander(divPartial){
     }
 }
 
+function viewMinimizer(divPartialList){
+    divPartialList.forEach(element => {
+        document.getElementById(element + "Basic").style.display = "block";
+        document.getElementById(element + "Simple").style.display = "none";
+        document.getElementById(element + "Advanced").style.display = "none";
+    });
+
+}
+
 document.getElementById("beginningPhaseDiv").addEventListener(
     "click", 
-    function(){ viewExpander("beginningPhase") },
+    function(){
+        viewExpander("beginningPhase");
+        viewMinimizer(["precombatMainPhase", "combatPhase", "postcombatMainPhase", "endPhase"]);
+    },
     true
 );
 
 document.getElementById("precombatMainPhaseDiv").addEventListener(
     "click", 
-    function(){ viewExpander("precombatMainPhase") },
+    function(){ 
+        viewExpander("precombatMainPhase");
+        viewMinimizer(["beginningPhase", "combatPhase", "postcombatMainPhase", "endPhase"]);
+    },
     true
 );
 
 document.getElementById("combatPhaseDiv").addEventListener(
     "click", 
-    function(){ viewExpander("combatPhase") },
+    function(){ 
+        viewExpander("combatPhase");
+        viewMinimizer(["beginningPhase", "precombatMainPhase", "postcombatMainPhase", "endPhase"]);
+    },
     true
 );
 
 document.getElementById("postcombatMainPhaseDiv").addEventListener(
     "click", 
-    function(){ viewExpander("postcombatMainPhase") },
+    function(){ 
+        viewExpander("postcombatMainPhase");
+        viewMinimizer(["beginningPhase", "precombatMainPhase", "combatPhase", "endPhase"]);
+    },
     true
 );
 
 document.getElementById("endPhaseDiv").addEventListener(
     "click", 
-    function(){ viewExpander("endPhase") },
+    function(){ 
+        viewExpander("endPhase")
+        viewMinimizer(["beginningPhase", "precombatMainPhase", "combatPhase", "postcombatMainPhase"]);
+    },
     true
 );
 
@@ -81,9 +105,9 @@ document.getElementById("advancedViewTogglePrecombatMain").addEventListener(
 document.getElementById("simpleViewTogglePrecombatMain").addEventListener(
     "click", 
     function(){ 
-        document.getElementById("PrecombatMainPhaseBasic").style.display = "none";
-        document.getElementById("PrecombatMainPhaseSimple").style.display = "block";
-        document.getElementById("PrecombatMainPhaseAdvanced").style.display = "none";
+        document.getElementById("precombatMainPhaseBasic").style.display = "none";
+        document.getElementById("precombatMainPhaseSimple").style.display = "block";
+        document.getElementById("precombatMainPhaseAdvanced").style.display = "none";
 
     },
     false
@@ -123,9 +147,9 @@ document.getElementById("advancedViewTogglePostcombatMain").addEventListener(
 document.getElementById("simpleViewTogglePostcombatMain").addEventListener(
     "click", 
     function(){ 
-        document.getElementById("PostcombatMainPhaseBasic").style.display = "none";
-        document.getElementById("PostcombatMainPhaseSimple").style.display = "block";
-        document.getElementById("PostcombatMainPhaseAdvanced").style.display = "none";
+        document.getElementById("postcombatMainPhaseBasic").style.display = "none";
+        document.getElementById("postcombatMainPhaseSimple").style.display = "block";
+        document.getElementById("postcombatMainPhaseAdvanced").style.display = "none";
 
     },
     false
