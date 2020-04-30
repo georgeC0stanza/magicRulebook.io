@@ -72,7 +72,7 @@
                 <hr>
                 <button style="float: left;">Close</button>
                 <button id="simpleViewToggle">Fewer Details</button>
-                <button style="display: table; float: unset; margin: auto">Comprehensive Rules</button>
+                <button style="display: table; float: unset; margin: auto; display: none;">Comprehensive Rules</button>
             </div>
 
         </div>
@@ -113,7 +113,7 @@
                 <hr>
                 <button style="float: left;">Close</button>
                 <button id="simpleViewTogglePrecombatMain">Fewer Details</button>
-                <button style="display: table; float: unset; margin: auto">Comprehensive Rules</button>
+                <button style="display: table; float: unset; margin: auto; display: none;">Comprehensive Rules</button>
             </div>
         </div>
     </div>
@@ -172,7 +172,14 @@
                     <li>All combat damage that's been assigned is dealt simultaneously</li>
                 </ol>
                 <ul>
-                    <li>If at least one attacking or blocking creature has first strike or double strike as the combat damage step begins, the only creatures that assign combat damage in that step are those with first strike or double strike. After that step, instead of proceeding to the end of combat step, the phase gets a second combat damage step. The only creatures that assign combat damage in that step are the remaining attackers and blockers that had neither first strike nor double strike as the first combat damage step began, as well as the remaining attackers and blockers that currently have double strike. After that step, the phase proceeds to the end of combat step.</li>
+                    <li>If a creature has first strike or double strike:
+                        <ol>
+                            <li>As the combat damage step begins, the only creatures that assign combat damage in that step are those with first strike or double strike</li>
+                            <li>Instead of proceeding to the end of combat step, the phase gets a second combat damage step</li>
+                            <li>The only creatures that assign combat damage in that step are the remaining attackers and blockers that had neither first strike nor double strike as the first combat damage step began, as well as the remaining attackers and blockers that currently have double strike</li>
+                            <li>After that step, the phase proceeds to the end of combat step</li>
+                        </ol>
+                    </li>
                 </ul>
                 <h4>End of Combat Step</h4>
                 <ol>
@@ -202,11 +209,11 @@
                     <li>Assign which creatures are attacking which players</li>
                     <li>If applicable, anounce Banding / "bands with other" which creatures are banded</li>
                     <li>Tap creatures that are attacking</li>
-                    <li>player can choose to pay for optional attacking costs</li>
-                    <li>player may activate mana sources and once they have enough for all costs, pays them in any order in full</li>
-                    <li>each chosen creature still controlled by the active player is an attacting creature</li>
-                    <li>abilities trigger for attacking creatures being declared</li>
-                    <li>active player gains priority</li>
+                    <li>Player can choose to pay for optional attacking costs</li>
+                    <li>Player may activate mana sources and once they have enough for all costs, pays them in any order in full</li>
+                    <li>Each chosen creature still controlled by the active player is an attacting creature</li>
+                    <li>Abilities trigger for attacking creatures being declared</li>
+                    <li>Active player gains priority</li>
                 </ol>
                 <h4>Declare Blockers Step</h4>
                 <ol>
@@ -220,27 +227,27 @@
                         <ol>
                             <li>If any of the chosen creatures require paying costs to block, the defending player determines the total cost to block</li>
                             <li>If any of the cost require mana, the defending player then has a chanse to activate mana abilities</li>
-                            <li>one the player has enough mana in their mana pool, they pay all costs in any order in full</li>
-                            <li>each chosen creature still controlled by the defending player becomes a blocking creature
+                            <li>One the player has enough mana in their mana pool, they pay all costs in any order in full</li>
+                            <li>Each chosen creature still controlled by the defending player becomes a blocking creature
                                 <ul>
-                                    <li>a blocking creature remains as such until is is removed from combat or the combat phase ends</li>
+                                    <li>A blocking creature remains as such until is is removed from combat or the combat phase ends</li>
                                 </ul>
                             </li>
-                            <li>any attacking creature with one or more creatures declares as blocking for it becomes a blocked creature; any without creatures blocking them become unblocked creatures
+                            <li>Any attacking creature with one or more creatures declares as blocking for it becomes a blocked creature; any without creatures blocking them become unblocked creatures
                                 <ul>
                                     <li>This remains unchanged until the creature is removed form combat, an effect says that it is blocked or unblocked, or the combat phase ends, which ever comes first</li>
                                 </ul>
                             </li>
-                            <li>abilities trigger for blockers being declared</li>
+                            <li>Abilities trigger for blockers being declared</li>
                             <li>the active player gets priority
                                 <ul>
-                                    <li>any abilities that triggered on blockers being declared or that trigger during the process are put onto the stack before the active player gets priority</li>
+                                    <li>Any abilities that triggered on blockers being declared or that trigger during the process are put onto the stack before the active player gets priority</li>
                                 </ul>
                             </li>
                         </ol>
                     </li>
-                    <li>for each attacking creature that's become blocked, the active player announces that creature's damage assignment order</li>
-                    <li>for each blocking creature, the defending player announces that creatures's damage assignment order</li>
+                    <li>For each attacking creature that's become blocked, the active player announces that creature's damage assignment order</li>
+                    <li>For each blocking creature, the defending player announces that creatures's damage assignment order</li>
                 </ol>
                 <h4>Combat Damage</h4>
                 <ol>
@@ -269,7 +276,14 @@
                     </li>
                 </ol>
                 <ul>
-                    <li>If at least one attacking or blocking creature has first strike (see rule 702.7) or double strike (see rule 702.4) as the combat damage step begins, the only creatures that assign combat damage in that step are those with first strike or double strike. After that step, instead of proceeding to the end of combat step, the phase gets a second combat damage step. The only creatures that assign combat damage in that step are the remaining attackers and blockers that had neither first strike nor double strike as the first combat damage step began, as well as the remaining attackers and blockers that currently have double strike. After that step, the phase proceeds to the end of combat step.</li>
+                    <li>If a creature has first strike or double strike:
+                        <ol>
+                            <li>As the combat damage step begins, the only creatures that assign combat damage in that step are those with first strike or double strike</li>
+                            <li>Instead of proceeding to the end of combat step, the phase gets a second combat damage step</li>
+                            <li>The only creatures that assign combat damage in that step are the remaining attackers and blockers that had neither first strike nor double strike as the first combat damage step began, as well as the remaining attackers and blockers that currently have double strike</li>
+                            <li>After that step, the phase proceeds to the end of combat step</li>
+                        </ol>
+                    </li>
                 </ul>
                 <h4>End of Combat Step</h4>
                 <ol>
@@ -277,15 +291,12 @@
                     <li>The active player gets priority</li>
                     <li>Creatures and planeswalkers are removed from combat and effects that last "until end of combat" expire</li>
                 </ol>
-                <hr>
-                <ul>
-                    <li>see rules 508.3, .4, .5, .6, .7</li>
-                </ul>
-                <h4>Attacking twice</h4>
+                <h4  style="display: none;">Attacking twice</h4>
+                <!-- address this! -->
                 <hr>
                 <button style="float: left;">Close</button>
                 <button id="simpleViewToggleCombat">Fewer Details</button>
-                <button style="display: table; float: unset; margin: auto">Comprehensive Rules</button>
+                <button style="display: table; float: unset; margin: auto; display: none;">Comprehensive Rules</button>
             </div>
         </div>
     </div>
@@ -325,7 +336,7 @@
                 <hr>
                 <button style="float: left;">Close</button>
                 <button id="simpleViewTogglePostcombatMain">Fewer Details</button>
-                <button style="display: table; float: unset; margin: auto">Comprehensive Rules</button>
+                <button style="display: table; float: unset; margin: auto; display: none;">Comprehensive Rules</button>
             </div>
         </div>
     </div>
@@ -377,7 +388,7 @@
                 <hr>
                 <button style="float: left;">Close</button>
                 <button id="simpleViewToggleEnd">Fewer Details</button>
-                <button style="display: table; float: unset; margin: auto">Comprehensive Rules</button>
+                <button style="display: table; float: unset; margin: auto; display: none;">Comprehensive Rules</button>
             </div>
         </div>
     </div>
