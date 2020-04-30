@@ -110,11 +110,12 @@
             <div class="innerDivAdvanced">
                 <ol>
                     <li>Abilities that trigger at the beginning of the main phase or the precombat main phase go on the stack</li>
-                    <li><span style="font-style: italic;">The active player gains priority</span></li>
-                    <ul>
-                        <li>Once per turn, the active player may play a land from their hand while the stack is empty (This is a special action that doesn't use the stack)</li>
-                        <li>Non-instants can be played during this phase, by the active player, when the stack is empty</li>
-                    </ul>
+                    <li><span style="font-style: italic;">The active player gains priority</span>
+                        <ul>
+                            <li>Once per turn, the active player may play a land from their hand while the stack is empty (This is a special action that doesn't use the stack)</li>
+                            <li>Non-instants can be played during this phase, by the active player, when the stack is empty</li>
+                        </ul>
+                    </li>
                 </ol>
                 <hr>
                 <button style="float: left;">Close</button>
@@ -145,11 +146,12 @@
                 </ol>
                 <h4>Declare Attackers Step</h4>
                 <ol>
-                    <li>Assign attacking creatures</li>
-                    <ul>
-                        <li>Must be untapped</li>
-                        <li>Must have haste or have been controlled by the active player continuously since the turn began</li>
-                    </ul>
+                    <li>Assign attacking creatures:
+                        <ul>
+                            <li>Must be untapped</li>
+                            <li>Must have haste or have been controlled by the active player continuously since the turn began</li>
+                        </ul>
+                    </li>
                     <li>Assign which creatures are attacking which players</li>
                     <li>Tap creatures that are attacking</li>
                     <li>Pay for optional attacking costs, if desired</li>
@@ -158,7 +160,7 @@
                 </ol>
                 <h4>Declare Blockers Step</h4>
                 <ol>
-                    <li>The defending player chooses which creatures they control to block
+                    <li>The defending player chooses which creatures they control to block:
                         <ul>
                             <li>Must be untapped</li>
                             <li>The defending player chooses which creatures will block which attacking creatures</li>
@@ -207,11 +209,12 @@
                 </ol>
                 <h4>Declare Attackers Step</h4>
                 <ol>
-                    <li>The active players assign attacking creatures</li>
-                    <ul>
-                        <li>Must be untapped</li>
-                        <li>Must have haste or have been controlled by the active player continuously since the turn began</li>
-                    </ul>
+                    <li>The active players assign attacking creatures:
+                        <ul>
+                            <li>Must be untapped</li>
+                            <li>Must have haste or have been controlled by the active player continuously since the turn began</li>
+                        </ul>
+                    </li>
                     <li>Active player assigns which creatures are attacking which players</li>
                     <li>If applicable, the active player anounces <span style="font-weight: bold;">Banding</span> / "bands with other" which creatures are banded</li>
                     <li>Active player taps all creatures that are attacking</li>
@@ -258,16 +261,18 @@
                     <li>Each attacking creature and blocking creature assigns combat damage equal to its power
                         <ul>
                             <li>An unblocked creature assigns its combat damage to the player or planeswalker it's attacking</li>
-                            <li>A blocked creature assigns its combat damage to the creatures blocking it according to the damage assignment order announced for it</li>
-                            <ul style="display: none;">
+                            <li>A blocked creature assigns its combat damage to the creatures blocking it according to the damage assignment order announced for it
+                                <ul style="display: none;">
+                                        <!-- address this! -->
+                                    <li>This may allow the blocked creature to divide its combat damage. However, it can’t assign combat damage to a creature that’s blocking it unless, when combat damage assignments are complete, each creature that precedes that blocking creature in its order is assigned lethal damage. When checking for assigned lethal damage, take into account damage already marked on the creature and damage from other creatures that’s being assigned during the same combat damage step, but not any abilities or effects that might change the amount of damage that’s actually dealt. An amount of damage that’s greater than a creature’s lethal damage may be assigned to it.</li>
+                                </ul>
+                            </li>
+                            <li>A blocking creature assigns combat damage to the creatures it's blocking according to the damage assignment order announced for it
+                                <ul style="display: none;">
                                     <!-- address this! -->
-                                <li>This may allow the blocked creature to divide its combat damage. However, it can’t assign combat damage to a creature that’s blocking it unless, when combat damage assignments are complete, each creature that precedes that blocking creature in its order is assigned lethal damage. When checking for assigned lethal damage, take into account damage already marked on the creature and damage from other creatures that’s being assigned during the same combat damage step, but not any abilities or effects that might change the amount of damage that’s actually dealt. An amount of damage that’s greater than a creature’s lethal damage may be assigned to it.</li>
-                            </ul>
-                            <li>A blocking creature assigns combat damage to the creatures it's blocking according to the damage assignment order announced for it</li>
-                            <ul style="display: none;">
-                                <!-- address this! -->
-                                <li>This may allow the blocking creature to divide its combat damage. However, it can’t assign combat damage to a creature that it’s blocking unless, when combat damage assignments are complete, each creature that precedes that blocked creature is assigned lethal damage. When checking for assigned lethal damage, take into account damage already marked on the creature and damage from other creatures that’s being assigned during the same combat damage step, but not any abilities or effects that might change the amount of damage that’s actually dealt. An amount of damage that’s greater than a creature’s lethal damage may be assigned to it.</li>
-                            </ul>
+                                    <li>This may allow the blocking creature to divide its combat damage. However, it can’t assign combat damage to a creature that it’s blocking unless, when combat damage assignments are complete, each creature that precedes that blocked creature is assigned lethal damage. When checking for assigned lethal damage, take into account damage already marked on the creature and damage from other creatures that’s being assigned during the same combat damage step, but not any abilities or effects that might change the amount of damage that’s actually dealt. An amount of damage that’s greater than a creature’s lethal damage may be assigned to it.</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li>All combat damage that's been assigned is dealt simultaneously</li>
@@ -330,11 +335,12 @@
             <div class="innerDivAdvanced">
                 <ol>
                     <li>Abilities that trigger at the beginning of the main phase or the postcombat main phase go on the stack</li>
-                    <li><span style="font-style: italic;">The active player gains priority</span></li>
-                    <ul>
-                        <li>Once per turn, the active player may play a land from their hand while the stack is empty (This is a special action that doesn't use the stack)</li>
-                        <li>Non-instants can be played during this phase, by the active player, when the stack is empty</li>
-                    </ul>
+                    <li><span style="font-style: italic;">The active player gains priority:</span>
+                        <ul>
+                            <li>Once per turn, the active player may play a land from their hand while the stack is empty (This is a special action that doesn't use the stack)</li>
+                            <li>Non-instants can be played during this phase, by the active player, when the stack is empty</li>
+                        </ul>
+                    </li>                        
                 </ol>
                 <hr>
                 <button style="float: left;">Close</button>
